@@ -17,6 +17,7 @@ using Patterns.Mediator.GUI.UIFramework;
 using Patterns.Composite;
 using Patterns.Mediator.Chat;
 using Patterns.Composite.Exercise;
+using Patterns.Adapter;
 
 namespace Patterns
 {
@@ -36,31 +37,12 @@ namespace Patterns
             //ChainOfResponsibiltyExcercise();
             //VisitorPattern();
             //CompositePattern();
-
-            FireFighterProgram.Run();
+            // ChatProgram.Run();
+            // FireFighterProgram.Run();
             //MediatorPatternChatRoom();
+
+            EmailProgram.Run();
         }
-
-        private static void MediatorPatternChatRoom()
-        {
-            var nick = new User("Nick");
-
-            var kingPie = new User("King Pie");
-            var chatRoom = new ChatRoom();
-            var codeLegion = new User("Code Legion");
-            var kamara = new User("Kamara");
-
-            chatRoom.Join(nick);
-            chatRoom.Join(kingPie);
-            chatRoom.Join(codeLegion);
-            chatRoom.Join(kamara);
-
-            kamara.Say("Hello My name is Kamara");
-            nick.Say("Hi Kamara,My name is Nicolas");
-            codeLegion.Say("Hi yall");
-            kamara.Say("Hi");
-        }
-
         private static void CompositePattern()
         {
             var group1 = new Group();
@@ -183,19 +165,7 @@ namespace Patterns
 
         private static void IteratorPattern()
         {
-            var browserHistory = new BrowserHistory();
-            browserHistory.Push("https://www.nicksoftware.co.za");
-            browserHistory.Push("https://www.google.com");
-            browserHistory.Push("https://www.github.com/hnicolus");
-
-            var iterator = browserHistory.CreateIterator();
-
-            while (iterator.HasNext())
-            {
-                var current = iterator.Current();
-                System.Console.WriteLine(current);
-                iterator.Next();
-            }
+            BrowserProgram.Run();
         }
 
         private static void StatePattern()
