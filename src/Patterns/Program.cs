@@ -2,6 +2,7 @@
 using System.Data;
 using System.Threading;
 using Patterns.Adapter;
+using Patterns.Bridge;
 using Patterns.ChainOfResponsibility.accountingApplication;
 using Patterns.ChainOfResponsibility.WebServerExample;
 using Patterns.Composite;
@@ -48,7 +49,9 @@ namespace Patterns
 
             //MapProgram.Run();
 
-            SpreadSheetProgram.Run();
+            //SpreadSheetProgram.Run();
+
+            DeviceRemoteProgram.Run();
         }
 
         private static void VisitorPattern()
