@@ -4,7 +4,7 @@ namespace Patterns.Template
 {
     public abstract class Window
     {
-        public void close()
+        public void Close()
         {
 
             //TODO: custom windows may need to execute some code before the window
@@ -18,11 +18,13 @@ namespace Patterns.Template
             OnExecuted();
         }
 
-        protected virtual void OnExecution(){
+        protected virtual void OnExecution()
+        {
 
         }
-        protected virtual void OnExecuted(){
-            
+        protected virtual void OnExecuted()
+        {
+
         }
 
 

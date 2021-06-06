@@ -2,20 +2,20 @@ namespace Patterns.Iterator.Products
 {
     public class Product
     {
-        private int id;
-        private string name;
+        private readonly int _id;
+        private readonly string _name;
 
         public Product(int id, string name)
         {
-            this.id = id;
-            this.name = name;
+            this._id = id;
+            this._name = name;
         }
 
         public override string ToString()
         {
             return "Product{" +
-                    "id=" + id +
-                    ", name='" + name + '\'' +
+                    "id=" + _id +
+                    ", name='" + _name + '\'' +
                     '}';
         }
     }

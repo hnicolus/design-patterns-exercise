@@ -13,7 +13,7 @@ namespace Patterns.FlyWeight.spreadsheetApplication
         private readonly int _fontSize = 12;
         private readonly bool _isBold = false;
 
-        private Cell[,] _cells = new Cell[MAX_ROWS, MAX_COLS];
+        private readonly Cell[,] _cells = new Cell[MAX_ROWS, MAX_COLS];
         public SpreadSheet()
         {
             GenerateCells();
@@ -36,13 +36,13 @@ namespace Patterns.FlyWeight.spreadsheetApplication
             _cells[row, col].SetContent(content);
         }
 
-        private void EnsureCellExists(int row, int col)
+        private static void EnsureCellExists(int row, int col)
         {
             if (row < 0 || row >= MAX_ROWS)
-                throw new ArgumentOutOfRangeException("Row argument is out of range");
+                throw new ArgumentOutOfRangeException(nameof(row));
 
             if (col < 0 || col >= MAX_COLS)
-                throw new ArgumentOutOfRangeException("Column is out of range");
+                throw new ArgumentOutOfRangeException(nameof(col));
         }
 
         public void SetFontFamily(int row, int col, String fontFamily)

@@ -10,7 +10,7 @@ namespace Patterns.StrategyPattern
         {
             Encryption = encryptionAlgorithm;
         }
-        public void send(String message)
+        public void Send(String message)
         {
             Encryption.Encrypt(message);
             Console.WriteLine("Sending the encrypted message...");

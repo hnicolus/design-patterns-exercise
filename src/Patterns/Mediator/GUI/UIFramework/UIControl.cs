@@ -1,5 +1,5 @@
-using System.Collections.Generic;
 using System;
+using System.Collections.Generic;
 
 namespace Patterns.Mediator.GUI.UIFramework
 
@@ -7,7 +7,7 @@ namespace Patterns.Mediator.GUI.UIFramework
 
     public abstract class UIControl : IObservable
     {
-        protected List<IHandler> handlers = new List<IHandler>();
+        protected List<IHandler> handlers = new();
         public void AddHandler(IHandler handler)
         {
             handlers.Add(handler);

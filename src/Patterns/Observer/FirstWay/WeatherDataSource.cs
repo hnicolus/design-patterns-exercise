@@ -5,7 +5,7 @@ namespace Patterns.Observer
 
     public class WeatherDataSource : IObservable
     {
-        private List<IObserver> _observers = new List<IObserver>();
+        private readonly List<IObserver> _observers = new();
         private float duePoint;
         private float temperature;
 

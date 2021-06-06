@@ -5,20 +5,20 @@ namespace Patterns.Adapter.Gmail
 {
     public class GmailClient
     {
-        public void connect()
+        public static void Connect()
         {
             WriteLine("Connecting to Gmail");
             Thread.Sleep(2000);
         }
 
-        public void getEmails()
+        public static void GetEmails()
         {
             WriteLine("Downloading emails from Gmail");
             Thread.Sleep(3000);
 
         }
 
-        public void disconnect()
+        public static void Disconnect()
         {
             WriteLine("Disconnecting from Gmail");
             Thread.Sleep(2000);

@@ -4,10 +4,10 @@ namespace Patterns.Mediator.GUI.UIFramework
 {
     public class SignUpDialogBox
     {
-        private TextBox txtUsername = new TextBox();
-        private TextBox txtPassword = new TextBox();
-        private CheckBox checkAgreeToTerms = new CheckBox();
-        private Button btnSignUp = new Button();
+        private readonly TextBox txtUsername = new();
+        private readonly TextBox txtPassword = new();
+        private readonly CheckBox checkAgreeToTerms = new();
+        private readonly Button btnSignUp = new();
 
         public SignUpDialogBox()
         {

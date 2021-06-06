@@ -123,17 +123,17 @@ namespace Patterns
         {
             var homeWindow = new HomeWindow();
 
-            homeWindow.close();
+            homeWindow.Close();
 
         }
 
         private static void StrategyPattern()
         {
             var ChatClient = new ChatClient(new DESEncryption());
-            ChatClient.send("Hello ");
+            ChatClient.Send("Hello ");
 
             ChatClient.Encryption = new AESEncryption();
-            ChatClient.send("Hello ");
+            ChatClient.Send("Hello ");
         }
 
         private static void IteratorPatternExercise()
@@ -162,20 +162,20 @@ namespace Patterns
             var directionService = new DirectionService();
             directionService.TravelMode = new DrivingMode();
 
-            directionService.getEta();
-            directionService.getDirection();
+            directionService.GetEta();
+            directionService.GetDirection();
 
             directionService.TravelMode = new TransitMode();
-            directionService.getEta();
-            directionService.getDirection();
+            directionService.GetEta();
+            directionService.GetDirection();
 
             directionService.TravelMode = new BicycleMode();
-            directionService.getEta();
-            directionService.getDirection();
+            directionService.GetEta();
+            directionService.GetDirection();
 
             directionService.TravelMode = new WalkingMode();
-            directionService.getEta();
-            directionService.getDirection();
+            directionService.GetEta();
+            directionService.GetDirection();
         }
 
         private static void MementoPatternProgram()

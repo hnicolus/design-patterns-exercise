@@ -5,12 +5,12 @@ namespace Patterns.Adapter
 {
     public class EmailClient
     {
-        private List<IEmailProvider> providers = new List<IEmailProvider>();
-        public void AddProvider(IEmailProvider provider) => providers.Add(provider);
+        private readonly List<IEmailProvider> _providers = new();
+        public void AddProvider(IEmailProvider provider) => _providers.Add(provider);
 
         public void DownloadEmails()
         {
-            providers.ForEach(provder => provder.DownloadEmails());
+            _providers.ForEach(provder => provder.DownloadEmails());
         }
 
     }

@@ -1,22 +1,22 @@
-using System.Reflection.Emit;
 using System;
 using System.Collections.Generic;
+using System.Reflection.Emit;
 
 namespace Patterns.Iterator.Browser
 {
     public class BrowserHistory
     {
-        private List<string> urls = new List<string>();
+        private readonly List<string> _urls = new();
         public void Push(string url)
         {
-            urls.Add(url);
+            _urls.Add(url);
         }
 
         public string Pop()
         {
-            var index = urls.Count - 1;
-            var item = urls[index];
-            urls.Remove(item);
+            var index = _urls.Count - 1;
+            var item = _urls[index];
+            _urls.Remove(item);
             return item;
         }
 
@@ -36,12 +36,12 @@ namespace Patterns.Iterator.Browser
             }
             public string Current()
             {
-                return browserHistory.urls[index];
+                return browserHistory._urls[index];
             }
 
             public bool HasNext()
             {
-                return (index < browserHistory.urls.Count );
+                return (index < browserHistory._urls.Count);
             }
 
             public void Next()

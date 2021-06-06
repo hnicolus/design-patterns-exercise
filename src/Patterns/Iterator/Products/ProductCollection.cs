@@ -5,7 +5,7 @@ namespace Patterns.Iterator.Products
 {
     public class ProductCollection
     {
-        private List<Product> products = new List<Product>();
+        private List<Product> products = new();
 
         public void Add(Product product)
         {
@@ -20,7 +20,7 @@ namespace Patterns.Iterator.Products
         {
             private readonly ProductCollection productCollection;
 
-            private int index = 0 ;
+            private int index = 0;
             public ProductListIterator(ProductCollection productCollection)
             {
                 this.productCollection = productCollection;

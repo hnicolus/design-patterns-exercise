@@ -5,12 +5,12 @@ namespace Patterns.Visitor
 {
     public class HtmlDocument
     {
-        List<IHtmlNode> nodes = new List<IHtmlNode>();
-        public void AddNode(IHtmlNode node) => nodes.Add(node);
+        readonly List<IHtmlNode> _nodes = new();
+        public void AddNode(IHtmlNode node) => _nodes.Add(node);
         public void HighLight()
         {
             var highLightOperation = new HighLightOperation();
-            nodes.ForEach(node => node.Execute(highLightOperation));
+            _nodes.ForEach(node => node.Execute(highLightOperation));
         }
     }
 }

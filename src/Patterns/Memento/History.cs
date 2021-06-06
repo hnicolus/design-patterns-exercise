@@ -5,18 +5,18 @@ namespace Patterns.Memento
 {
     public class History
     {
-        List<EditorState> states = new List<EditorState>();
+        readonly List<EditorState> _states = new();
 
         public void Push(EditorState state)
         {
-            states.Add(state);
+            _states.Add(state);
         }
         public EditorState Pop()
         {
-            var indexOfLastState = states.Count - 1;
-            var lastItem = states[indexOfLastState];
+            var indexOfLastState = _states.Count - 1;
+            var lastItem = _states[indexOfLastState];
 
-            states.Remove(lastItem);
+            _states.Remove(lastItem);
             return lastItem;
 
         }
