@@ -1,23 +1,24 @@
-﻿using System.Threading;
+﻿using System;
 using System.Data;
-using System;
+using System.Threading;
+using Patterns.Adapter;
+using Patterns.ChainOfResponsibility.accountingApplication;
+using Patterns.ChainOfResponsibility.WebServerExample;
+using Patterns.Composite;
+using Patterns.Composite.Exercise;
+using Patterns.Facade.Exercise;
 using Patterns.Iterator.Browser;
 using Patterns.Iterator.Products;
+using Patterns.Mediator;
+using Patterns.Mediator.Chat;
+using Patterns.Mediator.GUI.UIFramework;
 using Patterns.Memento.WordEditor;
+using Patterns.Observer;
+using Patterns.Observer.FirstWay;
 using Patterns.State.Traveler;
 using Patterns.StrategyPattern;
 using Patterns.Template;
-using Patterns.Observer;
-using Patterns.Observer.FirstWay;
-using Patterns.Mediator;
-using Patterns.ChainOfResponsibility.WebServerExample;
-using Patterns.ChainOfResponsibility.accountingApplication;
 using Patterns.Visitor;
-using Patterns.Mediator.GUI.UIFramework;
-using Patterns.Composite;
-using Patterns.Mediator.Chat;
-using Patterns.Composite.Exercise;
-using Patterns.Adapter;
 
 namespace Patterns
 {
@@ -40,8 +41,8 @@ namespace Patterns
             // ChatProgram.Run();
             // FireFighterProgram.Run();
             //MediatorPatternChatRoom();
-
-            EmailProgram.Run();
+            //EmailProgram.Run();
+            TwitterProgram.Run();
         }
 
         private static void VisitorPattern()

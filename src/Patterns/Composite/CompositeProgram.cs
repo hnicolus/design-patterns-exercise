@@ -4,7 +4,7 @@ namespace Patterns.Composite
     {
         public static  void Run()
         {
-                        var group1 = new Group();
+            var group1 = new Group();
             group1.Add(new Shape("Triangle"));
             group1.Add(new Shape("Square"));
 
