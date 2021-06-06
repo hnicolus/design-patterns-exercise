@@ -7,6 +7,8 @@ using Patterns.ChainOfResponsibility.WebServerExample;
 using Patterns.Composite;
 using Patterns.Composite.Exercise;
 using Patterns.Facade.Exercise;
+using Patterns.FlyWeight;
+using Patterns.FlyWeight.spreadsheetApplication;
 using Patterns.Iterator.Browser;
 using Patterns.Iterator.Products;
 using Patterns.Mediator;
@@ -42,7 +44,11 @@ namespace Patterns
             // FireFighterProgram.Run();
             //MediatorPatternChatRoom();
             //EmailProgram.Run();
-            TwitterProgram.Run();
+            //TwitterProgram.Run();
+
+            //MapProgram.Run();
+
+            SpreadSheetProgram.Run();
         }
 
         private static void VisitorPattern()
