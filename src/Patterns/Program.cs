@@ -18,6 +18,7 @@ using Patterns.Mediator.GUI.UIFramework;
 using Patterns.Memento.WordEditor;
 using Patterns.Observer;
 using Patterns.Observer.FirstWay;
+using Patterns.Prototype;
 using Patterns.State.Traveler;
 using Patterns.StrategyPattern;
 using Patterns.Template;
@@ -51,7 +52,10 @@ namespace Patterns
 
             //SpreadSheetProgram.Run();
 
-            DeviceRemoteProgram.Run();
+            // DeviceRemoteProgram.Run();
+            
+            //Prototype Pattern Version
+            VideoEditorProgram.Run();
         }
 
         private static void VisitorPattern()
