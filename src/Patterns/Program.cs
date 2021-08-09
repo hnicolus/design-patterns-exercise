@@ -19,6 +19,7 @@ using Patterns.Memento.WordEditor;
 using Patterns.Observer;
 using Patterns.Observer.FirstWay;
 using Patterns.Prototype;
+using Patterns.Singleton.ConfigManager;
 using Patterns.State.Traveler;
 using Patterns.StrategyPattern;
 using Patterns.Template;
@@ -55,7 +56,8 @@ namespace Patterns
             // DeviceRemoteProgram.Run();
             
             //Prototype Pattern Version
-            VideoEditorProgram.Run();
+            //VideoEditorProgram.Run();
+            SingletonAppProgram.Run();
         }
 
         private static void VisitorPattern()
